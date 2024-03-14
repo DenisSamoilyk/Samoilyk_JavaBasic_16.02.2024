@@ -29,9 +29,14 @@ public class Main {
             return;
         }
 
+        if (-M > M || -N > N) {
+            System.out.println("Не можна використовувати мінусове значення, так що воно було замінено на позитивне!!!");
+            System.out.println();
+        }
 
-        int[][] arrayOne = new int[M][N];
-        int[][] arrayTwo = new int[N][M];
+
+        int[][] arrayOne = new int[Math.abs(M)][Math.abs(N)];
+        int[][] arrayTwo = new int[Math.abs(N)][Math.abs(M)];
 
         System.out.println("Array 1:");
 
