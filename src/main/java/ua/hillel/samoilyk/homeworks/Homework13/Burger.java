@@ -1,78 +1,50 @@
 package ua.hillel.samoilyk.homeworks.Homework13;
 
 public class Burger {
-    int bun;
-    int meat;
-    int cheese;
-    int green;
-    int mayo;
+    boolean bun;
+    boolean meat;
+    boolean cheese;
+    boolean green;
+    boolean mayo;
 
-
-    Burger(int amountOfBun, int amountOfMeat, int amountOfCheese, int amountOfGreen, int amountOfMayo) {
-        System.out.println(AllPossibleBurgers());
-
-        this.bun = amountOfBun;
-        this.meat = amountOfMeat;
-        this.cheese = amountOfCheese;
-        this.green = amountOfGreen;
-        this.mayo = amountOfMayo;
-
-        TypeOfBurger(bun, meat, cheese, green, mayo);
+    Burger() {
+        System.out.println("Enter something to create a burger");
     }
 
+    Burger(boolean bun, boolean meat, boolean cheese, boolean green, boolean mayo) {
 
-    void TypeOfBurger(int amountOfBun, int amountOfMeat, int amountOfCheese, int amountOfGreen, int amountOfMayo) {
+        this.bun = bun;
+        this.meat = meat;
+        this.cheese = cheese;
+        this.green = green;
+        this.mayo = mayo;
 
-        // Якщо класичний бургер
-        if (amountOfBun == 2
-                && amountOfMeat == 1
-                && amountOfCheese == 1
-                && amountOfGreen == 1
-                && amountOfMayo == 1) {
-            System.out.println("\nThis is classic burger: " + bun + "x bun, meat, cheese, green, mayo");
-        }
+        if (bun && meat && cheese && green && mayo) {
 
-        // Якщо дієтичний бургер
-        else if (amountOfBun == 2
-                && amountOfMeat == 1
-                && amountOfCheese == 1
-                && amountOfGreen == 1
-                && amountOfMayo == 0) {
-            System.out.println("\nThis is diet burger: " + bun + "x bun, meat, cheese, green.");
-        }
-
-        // Якщо бургер із подвійним м'ясом
-        else if (amountOfBun == 2
-                && amountOfMeat == 2
-                && amountOfCheese == 1
-                && amountOfGreen == 1
-                && amountOfMayo == 1) {
-            System.out.println("\nThis is double meat burger: " + bun + "x bun, " + meat + "x meat, cheese, green, mayo");
-        }
-
-        // Якщо склад бургер не збігається
-        else {
-            System.out.println("\nCouldn't find a burger with this ingredients!");
+            System.out.println("Classic burger"
+                    + "\nHas bun: " + bun
+                    + "\nHas meat: " + meat
+                    + "\nHas cheese: " + cheese
+                    + "\nHas green: " + green
+                    + "\nHas mayo: " + mayo);
         }
     }
 
+    Burger(boolean bun, boolean meat, boolean cheese, boolean green) {
 
-    // Написання кількості інгредієнтів
-    String PrintBurgerIngredients() {
-        return "\nAmount of bun: " + bun
-                + "\nAmount of meat: " + meat
-                + "\nAmount of cheese: " + cheese
-                + "\nAmount of green: " + green
-                + "\nAmount of mayo: " + mayo;
-    }
+        this.bun = bun;
+        this.meat = meat;
+        this.cheese = cheese;
+        this.green = green;
 
+        if (bun && meat && cheese && green) {
 
-    // Написання типів бургерів
-    String AllPossibleBurgers() {
-        return """
-                Classic burger: 2 bun, 1 meat, 1 cheese, 1 green, 1 mayo.
-                Diet burger: 2 bun, 1 meat, 1 cheese, 1 green, 0 mayo.
-                Double meat burger: 2 bun, 2 meat, 1 cheese, 1 green, 1 mayo.""";
+            System.out.println("Diet burger"
+                    + "\nHas bun: " + bun
+                    + "\nHas meat: " + meat
+                    + "\nHas cheese: " + cheese
+                    + "\nHas green: " + green);
+        }
     }
 
 
