@@ -6,6 +6,7 @@ public class Burger {
     boolean cheese;
     boolean green;
     boolean mayo;
+    boolean doubleMeat;
 
     Burger() {
         System.out.println("Enter something to create a burger");
@@ -47,5 +48,24 @@ public class Burger {
         }
     }
 
+    Burger(boolean bun, boolean meat, boolean cheese, boolean green, boolean mayo, boolean doubleMeat) {
+
+        this.bun = bun;
+        this.meat = meat;
+        this.cheese = cheese;
+        this.green = green;
+        this.mayo = mayo;
+        this.doubleMeat = doubleMeat;
+
+        if (bun && meat && cheese && green && mayo && doubleMeat) {
+
+            System.out.println("Double meat burger"
+                    + "\nHas bun: " + bun
+                    + "\nHas 2 meat: " + doubleMeat
+                    + "\nHas cheese: " + cheese
+                    + "\nHas green: " + green
+                    + "\nHas mayo: " + mayo);
+        }
+    }
 
 }
