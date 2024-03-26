@@ -2,17 +2,17 @@ package ua.hillel.samoilyk.homeworks.Homework14;
 
 public class FitnessTracker {
     // Ім'я та прізвище користувача
-    private String name;
+    private final String name;
     public String surname;
 
     // Дата народження
-    private int birthDay;
-    private int birthMonth;
-    private int birthYear;
+    private final int birthDay;
+    private final int birthMonth;
+    private final int birthYear;
 
     // Контакти
-    private long phoneNumber;
-    private String email;
+    private final long phoneNumber;
+    private final String email;
 
     // Інше
     public int weight;
