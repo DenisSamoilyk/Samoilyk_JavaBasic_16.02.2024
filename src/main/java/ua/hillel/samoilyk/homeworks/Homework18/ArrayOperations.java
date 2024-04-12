@@ -6,8 +6,9 @@ public class ArrayOperations {
     public static double calculateAverage(int[] array) {
 
         // Якщо нуль, писати попередження
-        if (array.length == 0) {
+        if (array == null || array.length == 0) {
             System.out.println("Array must not be empty");
+            return 0;
         }
 
         double sum = 0;
@@ -23,13 +24,13 @@ public class ArrayOperations {
     public static boolean isSquareMatrix(int[][] matrix) {
 
         // Якщо нуль, повертає false
-        if (matrix.length == 0) {
+        if (matrix == null || matrix.length == 0) {
             return false;
         }
 
         // Якщо довжина не збігається з іншими, видавати false
         for (int[] row : matrix) {
-            if (row.length != matrix.length) {
+            if (row == null || row.length != matrix.length) {
                 return false;
             }
         }
