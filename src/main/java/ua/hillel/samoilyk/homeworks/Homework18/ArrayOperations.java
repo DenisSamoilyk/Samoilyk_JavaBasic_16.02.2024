@@ -5,10 +5,14 @@ public class ArrayOperations {
     // Метод на середнє арифметичне
     public static double calculateAverage(int[] array) {
 
-        // Якщо нуль, писати попередження
-        if (array == null || array.length == 0) {
-            System.out.println("Array must not be empty");
+        if (array == null) {
+            System.out.println("Error. NullPointerException");
             return 0;
+        }
+
+        // Якщо нуль, писати попередження
+        if (array.length == 0) {
+            System.out.println("Array must not be empty");
         }
 
         double sum = 0;
@@ -23,14 +27,20 @@ public class ArrayOperations {
     // Метод на квадратну матрицю
     public static boolean isSquareMatrix(int[][] matrix) {
 
+        if (matrix == null) {
+            System.out.println("Error. NullPointerException");
+            return false;
+        }
+
         // Якщо нуль, повертає false
-        if (matrix == null || matrix.length == 0) {
+        if (matrix.length == 0) {
+            System.out.println("Matrix must not be empty");
             return false;
         }
 
         // Якщо довжина не збігається з іншими, видавати false
         for (int[] row : matrix) {
-            if (row == null || row.length != matrix.length) {
+            if (row.length != matrix.length) {
                 return false;
             }
         }
